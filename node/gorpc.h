@@ -35,8 +35,9 @@ extern "C" {
 
 //extern void Accept(v8::Local<v8::Value> lis); // __asm__ ("gorpc.main.Accept");
 //extern void Accept(v8::Local<v8::Value> lis) __asm__ ("net/rpc.(*Server).Accept");
-extern void Accept(GoInterface lis);
-extern struct Listener Listen(GoString network, GoString, address);
+//extern void Accept(GoInterface lis);
+//extern struct Listener Listen(GoString network, GoString, address);
+//extern void Start();
 
 #ifdef __cplusplus
 }
