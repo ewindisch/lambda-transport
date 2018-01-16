@@ -1,4 +1,11 @@
-Golang net/rpc language bindings
+Bring your own runtime to AWS Lambda!
+
+This project offers a C compatible library for applications to
+import and run on AWS Lambda. Currently supported is NodeJS,
+but bindings could be written for any language.
+
+We do NOT use a wrapper or loader, but instead offer
+library methods that emulate a Golang 1.x application.
 
 Supported language runtimes:
 - NodeJS
