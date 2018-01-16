@@ -1,0 +1,6 @@
+Golang net/rpc language bindings
+
+Supported language runtimes:
+- NodeJS
+
+License: Apache/2.0
