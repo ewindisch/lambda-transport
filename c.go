@@ -1,6 +1,6 @@
 package main
-// typedef void (*voidFunc) (unsigned char *context, unsigned char *event);
-// void callCfuncPointer(voidFunc ptr, unsigned char *context, unsigned char *event) {
+// typedef void (*voidFunc) (char *context, char *event);
+// void callCfuncPointer(voidFunc ptr, char *context, char *event) {
 //    return ptr(context, event);
 //  }
 import "C"

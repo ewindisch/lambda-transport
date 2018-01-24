@@ -1,5 +1,4 @@
-//include "gorpc.h"
-#include "../lambda.h"
+#include "gorpc.h"
 #include <node.h>
 
 namespace gorpc {
