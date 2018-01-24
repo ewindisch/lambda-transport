@@ -3,7 +3,7 @@
     {
       "target_name": "gorpc",
       "sources": [ "gorpc.cc" ],
-      "libraries": ['../gorpc.so']
+      "libraries": [ "../gorpc.a" ]
     }
   ]
 }
