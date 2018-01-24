@@ -1,6 +1,6 @@
 {
-  "name": "goomba",
-  "version": "1.0.0",
+  "name": "@ewindisch/goomba",
+  "version": "0.0.1",
   "description": "Bring your own runtime to AWS Lambda!",
   "main": "node/build/Release/gorpc.node",
   "scripts": {

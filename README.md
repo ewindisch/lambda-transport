@@ -10,12 +10,18 @@ library methods that emulate a Golang 1.x application.
 Supported language runtimes:
 - NodeJS
 
-# Usage
+# Usage - NodeJS
 
-*WORK IN PROGRESS* installation via npm will make these instructions functional
+The npm module currently ships a pre-compiled binary.
+Changes in the future will properly compile this or
+utilize node-pre-gyp. Until then, if the npm module does
+not work, you may need to build this project locally
+using `npm run build`.
 
-1. Copy a NodeJS binary into your project as file `node`.
-2. Include the following as the file `main` with mode `755`:
+1. `npm install -S @ewindisch/goomba` or checkout this package,
+run `npm run build` and install it into your project with `npm install`.
+2. Copy a NodeJS binary into your project as file `node`.
+3. Include the following as the file `main` with mode `755`:
 
 ```
 #!./node
@@ -25,5 +31,7 @@ function handler (context, event) {
 }
 lambda.start(handler);
 ```
+
+Finally, package as a zip and deploy to Lambda!
 
 License: Apache/2.0
