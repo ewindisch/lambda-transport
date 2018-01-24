@@ -12,11 +12,9 @@ import (
   "unsafe"
   "context"
   "time"
-  //"github.com/aws/aws-lambda-go/lambdacontext"
   "github.com/aws/aws-lambda-go/lambda/messages"
 )
 
-//func makeHandler(cFunction unsafe.Pointer) func(ctx context.Context, payload []byte) {
 func makeHandler(cFunction unsafe.Pointer) func(ctx, payload []byte) (result []byte, err error) {
   return func(ctx, payload []byte) (result []byte, err error) {
     C.callCfuncPointer((*[0]byte)(cFunction), C.CString(string(ctx[:])), C.CString(string(payload[:])));
@@ -29,7 +27,6 @@ func makeHandler(cFunction unsafe.Pointer) func(ctx, payload []byte) (result []b
 type Function struct {
 	/* C function pointer */
 	handler func(ctx, payload []byte) (result []byte, err error)
-  //unsafe.Pointer
 }
 
 func (fn *Function) Invoke(req *messages.InvokeRequest, response *messages.InvokeResponse) error {
@@ -68,16 +65,6 @@ func Start(userHandler unsafe.Pointer) {
   if err != nil {
     log.Fatal(err)
   }
-
-  /*
-  function := new(lambda.Function)
-  function.handler = handler
-  rs := reflect.ValueOf(&function).Elem()
-  rf := rs.Field(0)
-  rf = reflect.NewAt(rf.Type(), unsafe.Pointer(rf.UnsafeAddr())).Elem()
-  ri := reflect.ValueOf(&handler).Elem()
-  rf.Set(ri)
-  */
 
   function := new(Function)
   function.handler = makeHandler(userHandler)
