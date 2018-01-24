@@ -1,5 +1,5 @@
 {
-  "name": "@ewindisch/goomba",
+  "name": "lambda-transport",
   "version": "0.0.1",
   "description": "Bring your own runtime to AWS Lambda!",
   "main": "node/build/Release/gorpc.node",
@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ewindisch/goomba.git"
+    "url": "git+https://github.com/ewindisch/lambda-transport.git"
   },
   "keywords": [],
   "author": "",
   "license": "Apache/2.0",
   "bugs": {
-    "url": "https://github.com/ewindisch/goomba/issues"
+    "url": "https://github.com/ewindisch/lambda-transport/issues"
   },
-  "homepage": "https://github.com/ewindisch/goomba#readme"
+  "homepage": "https://github.com/ewindisch/lambda-transport#readme"
 }
