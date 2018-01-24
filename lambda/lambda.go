@@ -8,7 +8,6 @@ import (
   "net/rpc"
   "net"
   "reflect"
-  //"github.com/aws/aws-lambda-go/lambda"
 )
 
 // exports Start()
@@ -19,9 +18,6 @@ func Start(handler interface{}) {
     log.Fatal(err)
   }
   function := new(Function)
-  //fuh := reflect.ValueOf(&function).Elem()
-  //function.handler = handler
-  //fuh.handler = handler
   rpc.Register(function)
   rpc.Accept(lis)
   log.Fatal("accept should not have returned")
