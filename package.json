@@ -1,0 +1,21 @@
+{
+  "name": "goomba",
+  "version": "1.0.0",
+  "description": "Bring your own runtime to AWS Lambda!",
+  "main": "node/build/Release/gorpc.node",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./build.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ewindisch/goomba.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache/2.0",
+  "bugs": {
+    "url": "https://github.com/ewindisch/goomba/issues"
+  },
+  "homepage": "https://github.com/ewindisch/goomba#readme"
+}
