@@ -1,0 +1,5 @@
+*.a
+*.h
+*.so
+build
+__pycache__

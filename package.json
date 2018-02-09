@@ -4,8 +4,8 @@
   "description": "Bring your own runtime to AWS Lambda!",
   "main": "node/build/Release/gorpc.node",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./build.sh"
+    "build": "make node",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
